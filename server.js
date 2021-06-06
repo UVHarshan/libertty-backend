@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 5000;
 
 // Middlewares
 app.use(cors());
@@ -20,17 +20,17 @@ connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
 })
 
-////////***************  Importing router files
-const adimnsRouter = require('./routes/admins');
-const cashiersRouter = require('./routes/cashiers');
+////////***************  Importing router files (Controllers)
+const usersRouter = require('./routes/users');
+// const cashiersRouter = require('./routes/cashiers');
 const prodCategoryRouter = require('./routes/prodCategories');
 const customerRouter = require('./routes/customer');
 const suppliersRouter = require('./routes/suppliers');
 const productsRouter = require('./routes/products');
 
 //////******************  Using the imported router files
-app.use('/admins', adimnsRouter);
-app.use('/cashiers', cashiersRouter);
+app.use('/users', usersRouter);
+// app.use('/cashiers', cashiersRouter);
 app.use('/prodCategories', prodCategoryRouter);
 app.use('/customers', customerRouter);
 app.use('/suppliers', suppliersRouter);

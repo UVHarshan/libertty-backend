@@ -4,13 +4,12 @@ const Schema = mongoose.Schema;
 
 // Defining the schema
 const prodCategorySchema = new Schema({
-  categoryId: { type: Number, required: true },
-  name: { type: String, required: true },
+  category: { type: String, required: true }
 }, {
   timestamps: true,
 });
 
-// Creating a model for Admins
+// Creating a model for Categories
 const ProdCategory = mongoose.model('ProdCategory', prodCategorySchema);
 
 module.exports = ProdCategory;
