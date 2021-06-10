@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 
 // Creating a database schema
 const productSchema = new Schema({
-  brand: { type: String, required: true },
+  brand: { type: String},
   item: { type: String, required: true },
   category: { type: String, required: true },
   price: { type: String, required: true },
-  quantity: { type: Number, required: true },
+  quantity: { type: String, required: true },
 }, {
   timestamps: true,
 });

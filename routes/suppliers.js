@@ -10,15 +10,13 @@ router.route('/').get((req, res) => {
 
 // Post request to add details
 router.route('/add').post((req, res) => {
-  const supplierId = Number(req.body.supplierId);
   const name = req.body.name;
-  const mobileNo = req.body.mobileNo;
+  const mobile = req.body.mobile;
   const email = req.body.email;
 
   const newSuppplier = new Supplier({
-    supplierId,
     name,
-    mobileNo,
+    mobile,
     email
   });
 

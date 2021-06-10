@@ -15,7 +15,7 @@ router.route('/add').post((req, res) => {
   const item = req.body.item;
   const category = req.body.category;
   const price = req.body.price;
-  const quantity = Number(req.body.quantity);
+  const quantity = req.body.quantity;
   // const expiryDate = Date(req.body.expiryDate);  
 
   const newProduct = new Product({
