@@ -27,7 +27,7 @@ router.route('/add').post((req, res) => {
 
   // saving the customer in the database
   newCustomer.save()
-    .then(() => res.json('Customerrrrrrrrrrrrr added!'))
+    .then(() => res.json('Customer added!'))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 

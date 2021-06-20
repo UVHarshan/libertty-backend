@@ -20,7 +20,7 @@ connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
 })
 
-////////***************  Importing router files (Controllers)
+//////// Importing router files (Controllers)
 const usersRouter = require('./routes/users');
 // const cashiersRouter = require('./routes/cashiers');
 const prodCategoryRouter = require('./routes/prodCategories');
